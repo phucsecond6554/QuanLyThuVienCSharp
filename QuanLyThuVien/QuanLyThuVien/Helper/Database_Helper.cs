@@ -52,6 +52,22 @@ namespace QuanLyThuVien.Helper
             return check;
         } // Ham writedata de ghi du lieu len csdl
 
+        public bool execScalar(string sql) {
+            this.open_connect();
+            bool check = false;
+
+            try
+            {
+                SqlCommand command = new SqlCommand(sql, this.connection);
+                check = (bool)command.ExecuteScalar();
+                return check;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
         public DataTable readdata(string sql) {
             this.open_connect();
             DataTable datatable = new DataTable();
