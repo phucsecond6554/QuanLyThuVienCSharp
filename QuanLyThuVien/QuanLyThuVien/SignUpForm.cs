@@ -52,5 +52,13 @@ namespace QuanLyThuVien
                 MessageBox.Show("Thong tin khong hop le", "Error");
             } // Form khong hop le
         }
+
+        private void SigninBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SigninForm signin_form = new SigninForm();
+            signin_form.ShowDialog();
+            this.Close();
+        }
     }
 }

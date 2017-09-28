@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.SigninBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +63,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.SigninBtn);
             this.groupBox1.Controls.Add(this.Email);
             this.groupBox1.Controls.Add(this.PassConf);
             this.groupBox1.Controls.Add(this.Pass);
@@ -115,7 +117,7 @@
             this.SignupBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignupBtn.Location = new System.Drawing.Point(109, 224);
             this.SignupBtn.Name = "SignupBtn";
-            this.SignupBtn.Size = new System.Drawing.Size(101, 35);
+            this.SignupBtn.Size = new System.Drawing.Size(85, 35);
             this.SignupBtn.TabIndex = 1;
             this.SignupBtn.Text = "Sign up";
             this.SignupBtn.UseVisualStyleBackColor = true;
@@ -172,6 +174,16 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // SigninBtn
+            // 
+            this.SigninBtn.Location = new System.Drawing.Point(227, 224);
+            this.SigninBtn.Name = "SigninBtn";
+            this.SigninBtn.Size = new System.Drawing.Size(81, 35);
+            this.SigninBtn.TabIndex = 3;
+            this.SigninBtn.Text = "Sign in";
+            this.SigninBtn.UseVisualStyleBackColor = true;
+            this.SigninBtn.Click += new System.EventHandler(this.SigninBtn_Click);
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,5 +214,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button SigninBtn;
     }
 }

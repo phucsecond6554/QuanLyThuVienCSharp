@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using QuanLyThuVien.Helper;
 
 namespace QuanLyThuVien.Database
@@ -20,6 +21,16 @@ namespace QuanLyThuVien.Database
 
             return this.db_helper.execScalar(sql);
         } // Kiem tra username co ton tai hay chua (True la roi, false la chua)
+
+        public DataTable get_user_info(string username) {
+            DataTable data = new DataTable();
+
+            string sql = String.Format("exec get_user_info '{0}'", username);
+
+            data = this.db_helper.readdata(sql);
+
+            return data;
+        } // Lay thong tin nguoi dung theo ten 
 
         public bool sign_up(string username, string pass, string email) {
             //string sql = ;

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyThuVien.Bussiness;
 
 namespace QuanLyThuVien
 {
@@ -35,7 +36,32 @@ namespace QuanLyThuVien
 
         private void SigninBtn_Click(object sender, EventArgs e)
         {
-            
+            if (this.checkform()) {
+                string username = UserName.Text;
+                string pass = Password.Text;
+
+                Account_BS account_bs = new Account_BS();
+
+                Dictionary<string, object> return_data = account_bs.sign_in(username, pass); // Dang nhap
+
+                if ((bool)return_data["Success"])
+                {
+                    MessageBox.Show("Dang nhap thanh cong", "Success");
+                }
+                else
+                {
+                    MessageBox.Show((string)return_data["Error"], "Error");
+                }
+            }
+        }
+
+        private void SignupBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SignUpForm signup_form = new SignUpForm();
+            signup_form.ShowDialog();
+            this.Close();
+                        
         }// Event khi click vao nut dang nhap
     }
 }

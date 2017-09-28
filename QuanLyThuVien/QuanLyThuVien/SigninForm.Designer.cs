@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.SignupBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SigninGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,6 +59,7 @@
             // 
             // SigninGroup
             // 
+            this.SigninGroup.Controls.Add(this.SignupBtn);
             this.SigninGroup.Controls.Add(this.Password);
             this.SigninGroup.Controls.Add(this.UserName);
             this.SigninGroup.Controls.Add(this.SigninBtn);
@@ -91,7 +93,7 @@
             // 
             this.SigninBtn.Location = new System.Drawing.Point(152, 168);
             this.SigninBtn.Name = "SigninBtn";
-            this.SigninBtn.Size = new System.Drawing.Size(111, 34);
+            this.SigninBtn.Size = new System.Drawing.Size(80, 34);
             this.SigninBtn.TabIndex = 1;
             this.SigninBtn.Text = "Sign in";
             this.SigninBtn.UseVisualStyleBackColor = true;
@@ -129,6 +131,16 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // SignupBtn
+            // 
+            this.SignupBtn.Location = new System.Drawing.Point(252, 168);
+            this.SignupBtn.Name = "SignupBtn";
+            this.SignupBtn.Size = new System.Drawing.Size(86, 34);
+            this.SignupBtn.TabIndex = 3;
+            this.SignupBtn.Text = "Sign up";
+            this.SignupBtn.UseVisualStyleBackColor = true;
+            this.SignupBtn.Click += new System.EventHandler(this.SignupBtn_Click);
+            // 
             // SigninForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +167,7 @@
         private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.TextBox UserName;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button SignupBtn;
     }
 }
 

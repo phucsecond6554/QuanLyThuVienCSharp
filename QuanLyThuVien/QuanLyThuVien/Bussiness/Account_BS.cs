@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using QuanLyThuVien.Database;
 
 namespace QuanLyThuVien.Bussiness
@@ -36,5 +37,32 @@ namespace QuanLyThuVien.Bussiness
             this.return_data.Add("Success", false);
             return this.return_data;
         } // Function signup
+
+        public Dictionary<string, object> sign_in(string username, string password) {
+            DataTable data = this.account_db.get_user_info(username); // Lay thong tin 
+
+            if (data.Rows.Count != 1)
+            {
+                //Neu rows tra ve khac 1 tuc la khong co tai khoan
+                this.return_data.Add("Success", false);
+                this.return_data.Add("Error", "Ten tai khoan khong ton tai");
+                return this.return_data;
+            }
+            else {
+                string pass_in_db =(string) data.Rows[0]["pass"]; // Lay password luu trong db
+
+                if (password != pass_in_db)
+                {
+                    //Neu password khong trung khop
+                    this.return_data.Add("Success", false);
+                    this.return_data.Add("Error", "Mat khau khong dung");
+                    return this.return_data;
+                }
+                else {
+                    this.return_data.Add("Success", true);
+                    return this.return_data;
+                } // Mat khau chinh xac
+            } // Neu ten tai khoan ton tai
+        } // Function sign in
     }
 }
