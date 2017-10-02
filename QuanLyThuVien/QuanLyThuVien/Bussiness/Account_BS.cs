@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using QuanLyThuVien.Database;
+using QuanLyThuVien.Helper;
 
 namespace QuanLyThuVien.Bussiness
 {
@@ -60,6 +61,18 @@ namespace QuanLyThuVien.Bussiness
                 }
                 else {
                     this.return_data.Add("Success", true);
+
+                    //Khi dang nhap thanh cong luu username, id, permission lai
+                    //Thong qua class Variable_Helper
+
+                    Variable_Helper.set("Username", data.Rows[0]["username"]); // Luu username
+                    Variable_Helper.set("ID", data.Rows[0]["id"]); // Luu id
+                    Variable_Helper.set("Permission", data.Rows[0]["permission_name"]);//Luu chuc vu
+                    Variable_Helper.set("Permission_table", data.Rows[0]["permission_table"]); // Luu cac quyen truy cap
+                    
+                    //Cap nhat lai lan cuoi dang nhap
+                    this.account_db.update_signin_time((string) data.Rows[0]["username"]);
+                    
                     return this.return_data;
                 } // Mat khau chinh xac
             } // Neu ten tai khoan ton tai

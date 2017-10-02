@@ -32,6 +32,11 @@ namespace QuanLyThuVien.Database
             return data;
         } // Lay thong tin nguoi dung theo ten 
 
+        public bool update_signin_time(string username) {
+            string sql = String.Format("exec update_signin_time '{0}'", username);
+            return this.db_helper.execScalar(sql);
+        } // Cap nhat lai lan cuoi dang nhap
+
         public bool sign_up(string username, string pass, string email) {
             //string sql = ;
 

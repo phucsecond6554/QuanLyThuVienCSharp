@@ -8,3 +8,4 @@ F:\E\Tai lieu lap trinh\c#\QuanLyThuVienCSharp\QuanLyThuVien\QuanLyThuVien\obj\D
 F:\E\Tai lieu lap trinh\c#\QuanLyThuVienCSharp\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 F:\E\Tai lieu lap trinh\c#\QuanLyThuVienCSharp\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
 F:\E\Tai lieu lap trinh\c#\QuanLyThuVienCSharp\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.SignUpForm.resources
+F:\E\Tai lieu lap trinh\c#\QuanLyThuVienCSharp\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Main_form.resources

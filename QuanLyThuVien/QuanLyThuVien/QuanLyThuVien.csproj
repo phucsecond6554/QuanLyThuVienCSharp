@@ -48,6 +48,12 @@
     <Compile Include="Database\Account_DB.cs" />
     <Compile Include="Helper\Database_Helper.cs" />
     <Compile Include="Helper\Variable_Helper.cs" />
+    <Compile Include="Main_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_form.Designer.cs">
+      <DependentUpon>Main_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="SigninForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="SignUpForm.Designer.cs">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Main_form.resx">
+      <DependentUpon>Main_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SigninForm.resx">
       <DependentUpon>SigninForm.cs</DependentUpon>
     </EmbeddedResource>

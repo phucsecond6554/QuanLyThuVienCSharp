@@ -47,13 +47,16 @@ namespace QuanLyThuVien
                 if ((bool)return_data["Success"])
                 {
                     MessageBox.Show("Dang nhap thanh cong", "Success");
+
+                    Main_form main = new Main_form();
+                    main.Show();
                 }
                 else
                 {
                     MessageBox.Show((string)return_data["Error"], "Error");
                 }
             }
-        }
+        } // Khi nhan nut sign in
 
         private void SignupBtn_Click(object sender, EventArgs e)
         {
