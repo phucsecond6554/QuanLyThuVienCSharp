@@ -47,9 +47,10 @@ namespace QuanLyThuVien
                 if ((bool)return_data["Success"])
                 {
                     MessageBox.Show("Dang nhap thanh cong", "Success");
-
+                    this.Hide();
                     Main_form main = new Main_form();
-                    main.Show();
+                    main.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
