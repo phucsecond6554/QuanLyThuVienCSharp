@@ -51,8 +51,11 @@
       <DependentUpon>BookForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Bussiness\Account_BS.cs" />
+    <Compile Include="Bussiness\Book_BS.cs" />
     <Compile Include="Bussiness\Category_BS.cs" />
     <Compile Include="Database\Account_DB.cs" />
+    <Compile Include="Database\Bill_DB.cs" />
+    <Compile Include="Database\Book_DB.cs" />
     <Compile Include="Database\Category_DB.cs" />
     <Compile Include="Helper\Database_Helper.cs" />
     <Compile Include="Helper\Variable_Helper.cs" />
